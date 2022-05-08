@@ -1,0 +1,15 @@
+<body>
+{% extends 'base.html' %} 
+{% block content %}
+<form method="GET" action="{% url 'results' %}">
+  <div class="col-4">
+    <select id="sort" name="sort">
+      <option class="sort-title" id="title" value="title">이름순</option>
+      <option class="sort-size" id="size"  value="size">크기순</option>
+      <option class="sort-date" id="recent" value="recent">최신순</option>
+    </select>
+    <button class="btn btn-primary" type="submit">정렬</button>
+  </div>
+</form>
+{% endblock %}
+</body>
