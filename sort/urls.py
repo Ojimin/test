@@ -1,7 +1,8 @@
 from django.urls import path
-
+from sort.views import Home
 from . import views
 
 urlpatterns = [
-    path('', views.list_sort),
+    path('home/', Home.as_view(),name="home"),
+    path('results/',views.list_sort,name="results"),
 ]

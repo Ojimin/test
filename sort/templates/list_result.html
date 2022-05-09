@@ -1,0 +1,15 @@
+{% extends 'list_sort.html' %} {% block result %}
+{% if file_list %}
+  <ul>
+  {% for res in file_list %}
+  <li>
+    <div class="search_res">
+      <p> title : {{ res.title }}</p>
+    </div>
+  </li>
+  {% endfor %}
+  </ul>
+  {% else %}
+    <h2> 정렬에 문제가 있습니다. </h2>
+{% endif %}
+{% endblock %}
